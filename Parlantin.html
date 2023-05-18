@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <center><title>Parlantin</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body bgcolor="green">
+    <h1>Parlantin</h1>
+    <button onclick="cambiarFondo()">Cambiar fondo de página</button>
+    <p>Es el perro que adopté hace aproximadamente 2 años y medio
+        cuando trabajaba en un restaurante bar llamado Parlante, 
+        <br>era la mascota del lugar que ellos acogieron de la calle.
+        Despúes de un tiempo el perro se encariñó conmigo y me
+        <br> seguía a todos lados, un fin de semana
+        me lo llevé a casa y después cada fin de semana, hasta que un día decidí que y me lo quedaría.
+    </p>
+
+    <h3>Raza</h3>
+    <p id="texto">Es una mezcla de un Schnauzer con un French haha</p>
+    <button onclick="cambiarTexto()">Cambiar texto</button>
+
+    <h3>Vida aproximada</h3>
+    Hablando con algunos amigos que son veterinarios nos comentan que puede llegar a tener actualmente una edad de 10 u 11 años<br>
+
+    <h2 id="mensaje">Hola mundo</h2>
+        <button onclick="ocultarMensaje()">Ocultar mensaje</button>
+        <br>
+    
+    <h3>Imágenes</h3>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlwREsd0nHz2Gl1sJsEuEKzowBaXjVxklHjA&usqp=CAU" alt="Pelón">
+    <br><img id="imagen" src="https://www.dogproductpicker.com/wp-content/uploads/2021/07/Miniature-French-Schnauzer-Dog-Breed-Information-All-You-Need-To-Know.jpg" width="150" height="220" alt="Eso con un poco de pelo">
+    <br><button onclick="cambiarAtributo()">Cambiar imagen</button>
+    <button onclick="cambiarAtributo2()">Cambiar imagen</button>
+
+    <br><br>Si apachurras el botón sabrás quien fue el autor
+    <br><button onclick="escribirDiv()">Escribir con div</button>
+    <div id="miDiv"></div>
+
+
+    <script>
+        function cambiarFondo() {
+
+            document.body.style.backgroundImage = "url(https://images.unsplash.com/photo-1518963534257-f901d4d46f59?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60)";
+        }
+    </script>
+    <script>
+        function cambiarTexto() {
+            document.getElementById("texto").innerHTML = "Me he  <strong>modificado</strong> ahora soy un perro sin raza";
+        }
+    </script>
+    <script>
+        function cambiarAtributo() {
+            document.getElementById("imagen").src = "https://blog.institutodogcoaching.com/wp-content/uploads/2017/12/117.jpeg";
+
+        }
+    </script>
+
+    <script>
+        function cambiarAtributo2() {
+            document.getElementById("imagen").src = "https://www.dogproductpicker.com/wp-content/uploads/2021/07/Miniature-French-Schnauzer-Dog-Breed-Information-All-You-Need-To-Know.jpg";
+
+        }
+    </script>
+    <script>
+        function ocultarMensaje() {
+            var mensaje = document.getElementById('mensaje');
+            mensaje.style.display = 'none';
+        }
+    </script>
+    <script>
+        function escribirDiv() {
+            var div = document.getElementById('miDiv');
+            var mensaje = "Este texto no lo escribió Jair, lo escribió JavaScript";
+
+            div.innerHTML = "<h3>" + mensaje + "</h3>";
+        }
+    </script>
+
+
+
+</center>
+</body>
+</html>
